@@ -103,7 +103,7 @@ def barrys_bootcamp_spot_finder(username, password):
         data = r.json()
 
         for result in data.get('results', []):
-            if result['start_time'] == '08:45:00' or result['start_time'] == '07:30:00':
+            if result['start_time'] == '08:45:00' or result['start_time'] == '07:35:00':
                 class_unique_id = result['id']
                 class_layout_url = layout_url_base.format(class_unique_id)
                 r = s.get(class_layout_url)
