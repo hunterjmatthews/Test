@@ -121,6 +121,8 @@ def barrys_bootcamp_spot_finder(username, password):
                             return
                         elif day_of_week == 'Friday' and ('DF' not in spot_name or 'F' in spot_name):
                             reserve_barrys_class(username, password, result['id'], spot_name)
+                            with open('./GitHub_Action_Results.txt', 'w') as f:
+                                f.write(f"{ result['id']} at {spot_name} was booked!")
                             return
 def main():
     if len(sys.argv) != 3:
